@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {outline: "#7a7583", "surface-variant": "#e6e0ea", "on-tertiary-fixed": "#00201e", "on-tertiary": "#ffffff", "surface-dim": "#ded8e2", "on-primary": "#ffffff", "on-primary-fixed-variant": "#4e329c", "surface-container-highest": "#e6e0ea", surface: "#fdf7ff", "primary-fixed-dim": "#cdbdff", "on-secondary-fixed": "#30111f", "secondary-fixed": "#ffd9e5", "on-secondary-fixed-variant": "#623b4a", "error-container": "#ffdad6", "tertiary-container": "#1b827a", "on-background": "#1c1b21", "secondary-container": "#ffc9db", "primary-container": "#7d63cd", secondary: "#7c5262", "on-primary-container": "#fffbff", "tertiary-fixed-dim": "#7cd6cd", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#00504b", "surface-container-low": "#f8f1fb", "tertiary-fixed": "#98f2e9", "surface-tint": "#664bb5", error: "#ba1a1a", "on-error-container": "#93000a", primary: "#6349b2", "inverse-on-surface": "#f5eff8", "inverse-surface": "#322f37", "inverse-primary": "#cdbdff", tertiary: "#006761", "on-tertiary-container": "#f3fffc", "primary-fixed": "#e8ddff", "surface-bright": "#fdf7ff", "on-surface-variant": "#494552", "surface-container-lowest": "#ffffff", "surface-container-high": "#ece6f0", "on-secondary": "#ffffff", "on-primary-fixed": "#20005e", "on-secondary-container": "#7b5161", "secondary-fixed-dim": "#edb8cb", "surface-container": "#f2ecf6", background: "#fdf7ff", "on-surface": "#1c1b21", "outline-variant": "#cac4d4"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"space-xs": "0.25rem", "space-sm": "0.5rem", "space-lg": "1.5rem", gutter: "1.5rem", margin: "2rem", "space-xl": "2.5rem", "space-md": "1rem"}, fontFamily: {"label-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-md": ["14px", {lineHeight: "20px", fontWeight: "500"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-sm": ["18px", {lineHeight: "24px", fontWeight: "600"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+html.dark body { background: #1c1b21; color: #e6e0ea; }
+html.dark .bg-surface { background-color: #1c1b21; }
+html.dark .bg-surface-container-low { background-color: #211f26; }
+html.dark .bg-surface-container { background-color: #2b2930; }
+html.dark .bg-surface-container-high { background-color: #36343b; }
+html.dark .bg-surface-container-highest { background-color: #413f46; }
+html.dark .bg-surface-container-lowest { background-color: #141218; }
+html.dark .bg-primary-container { background-color: #4a3390; }
+html.dark .bg-secondary-container { background-color: #8a4f60; }
+html.dark .bg-tertiary-container { background-color: #004b47; }
+html.dark .bg-primary-fixed { background-color: #3d2480; }
+html.dark .bg-secondary-fixed { background-color: #6b3a4a; }
+html.dark .bg-tertiary-fixed { background-color: #1a5c57; }
+html.dark .bg-primary\/5, html.dark [class*="bg-primary/5"] { background-color: rgba(138,115,224,0.05); }
+html.dark .bg-primary\/10, html.dark [class*="bg-primary/10"] { background-color: rgba(138,115,224,0.1); }
+html.dark .bg-primary\/20, html.dark [class*="bg-primary/20"] { background-color: rgba(138,115,224,0.2); }
+html.dark .bg-secondary\/5, html.dark [class*="bg-secondary/5"] { background-color: rgba(219,153,171,0.05); }
+html.dark .bg-secondary\/10, html.dark [class*="bg-secondary/10"] { background-color: rgba(219,153,171,0.1); }
+html.dark .bg-surface\/80, html.dark [class*="bg-surface/80"] { background-color: rgba(28,27,33,0.8); }
+html.dark .bg-inverse-surface\/40, html.dark [class*="bg-inverse-surface/40"] { background-color: rgba(230,224,234,0.4); }
+html.dark .bg-inverse-surface\/50, html.dark [class*="bg-inverse-surface/50"] { background-color: rgba(230,224,234,0.5); }
+html.dark .text-on-surface { color: #e6e0ea; }
+html.dark .text-on-surface-variant { color: #cac4d4; }
+html.dark .text-on-primary { color: #ffffff; }
+html.dark .text-on-primary-container { color: #e8ddff; }
+html.dark .text-on-secondary-container { color: #ffd9e5; }
+html.dark .text-on-tertiary-container { color: #f3fffc; }
+html.dark .text-on-primary-fixed { color: #e8ddff; }
+html.dark .text-on-primary-fixed-variant { color: #cdbdff; }
+html.dark .text-on-secondary-fixed { color: #ffd9e5; }
+html.dark .text-on-secondary-fixed-variant { color: #edb8cb; }
+html.dark .text-on-tertiary-fixed { color: #98f2e9; }
+html.dark .text-on-error-container { color: #ffdad6; }
+html.dark .text-inverse-on-surface { color: #1c1b21; }
+html.dark .text-outline { color: #938f99; }
+html.dark .text-primary { color: #cdbdff; }
+html.dark .text-secondary { color: #edb8cb; }
+html.dark .text-tertiary { color: #7cd6cd; }
+html.dark .text-error { color: #ffb4ab; }
+html.dark .text-outline-variant { color: #49454f; }
+html.dark .border-outline-variant\/20, html.dark [class*="border-outline-variant/20"] { border-color: rgba(73,69,79,0.2); }
+html.dark .border-outline-variant\/30, html.dark [class*="border-outline-variant/30"] { border-color: rgba(73,69,79,0.3); }
+html.dark .border-surface-container { border-color: #2b2930; }
+html.dark .ring-primary { --tw-ring-color: #cdbdff; }
+html.dark .hover\:bg-surface-container-high:hover { background-color: #36343b; }
+html.dark .hover\:bg-surface-container:hover { background-color: #2b2930; }
+html.dark .hover\:bg-surface-dim:hover { background-color: #141218; }
+html.dark .peer:checked ~ div { background-color: #8a73c9; }
+</style></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col pt-space-xl pb-space-xl"><div class="px-space-lg mb-space-xl flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined">menu_book</span></div><span class="font-headline-sm text-on-surface">Study Planner</span></div><nav class="flex-1 px-space-md space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="dashboard.html"><span class="material-symbols-outlined mr-space-md">dashboard</span>Dashboard</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="subjects" href="sub.html"><span class="material-symbols-outlined mr-space-md">library_books</span>Subjects</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="study-schedule" href="scheadule.html"><span class="material-symbols-outlined mr-space-md">calendar_today</span>Study Schedule</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="goals" href="goals.html"><span class="material-symbols-outlined mr-space-md">flag</span>Goals</a><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold" data-path="progress" href="progress%20and%20report.html"><span class="material-symbols-outlined mr-space-md">trending_up</span>Progress</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="settings.html"><span class="material-symbols-outlined mr-space-md">settings</span>Settings</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center flex-1 max-w-md bg-surface-container rounded-xl px-space-md py-space-xs"><span class="material-symbols-outlined text-on-surface-variant mr-space-sm">search</span><input class="bg-transparent border-none outline-none w-full text-on-surface placeholder:text-on-surface-variant font-body-md" placeholder="Search tasks, subjects, notes..." type="text"/></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded-full hover:bg-surface-container-high text-on-surface-variant transition-colors"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen p-space-xl"><div class="flex flex-col w-full space-y-space-xl pb-space-xl">
+<!-- Page Header / Intro -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Analytics &amp; Progress</h1>
+<p class="font-body-md text-on-surface-variant mt-space-xs">Track your weekly study velocity, subject mastery, and productivity trends.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="bg-surface-container-high px-space-md py-space-sm rounded-xl flex items-center gap-space-sm shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_month</span>
+<span class="font-label-md text-on-surface" id="date-range-display">Last 7 Days</span>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md px-space-lg py-space-sm rounded-xl transition-all shadow-md flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Export Report
+      </button>
+</div>
+</div>
+<!-- Productivity Highlights Bento Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Total Study Hours -->
+<div class="bg-primary-container text-on-primary-container p-space-lg rounded-xl shadow-lg relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -right-4 -bottom-4 opacity-10 text-on-primary-container">
+<span class="material-symbols-outlined text-[120px]">schedule</span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md tracking-wider uppercase opacity-80">Total Study Hours</span>
+<div class="w-8 h-8 rounded-full bg-on-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg" id="stat-total-hours">0</span>
+<span class="font-body-md opacity-90">hrs this week</span>
+</div>
+</div>
+<div class="mt-space-lg flex items-center gap-space-xs text-label-sm opacity-90">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span id="stat-total-trend">Start studying to see trends</span>
+</div>
+</div>
+<!-- Current Streak -->
+<div class="bg-secondary-container text-on-secondary-container p-space-lg rounded-xl shadow-lg relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -right-4 -bottom-4 opacity-10 text-on-secondary-container">
+<span class="material-symbols-outlined text-[120px]">local_fire_department</span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md tracking-wider uppercase opacity-80">Current Streak</span>
+<div class="w-8 h-8 rounded-full bg-on-secondary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg" id="stat-streak">0</span>
+<span class="font-body-md opacity-90">days active</span>
+</div>
+</div>
+<div class="mt-space-lg flex items-center gap-space-xs text-label-sm opacity-90">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span id="stat-streak-best">Personal best: 0 days</span>
+</div>
+</div>
+<!-- Most Productive Day -->
+<div class="bg-surface-container-high text-on-surface p-space-lg rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -right-4 -bottom-4 opacity-5 text-on-surface">
+<span class="material-symbols-outlined text-[120px]">bolt</span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md tracking-wider uppercase text-on-surface-variant">Top Productive Day</span>
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg" id="stat-productive-day">—</span>
+<span class="font-body-md text-on-surface-variant" id="stat-productive-hours"></span>
+</div>
+</div>
+<div class="mt-space-lg flex items-center gap-space-xs text-label-sm text-primary font-medium" id="stat-productive-hint">
+<span class="material-symbols-outlined text-[16px]">star</span>
+<span>Data will appear after your first session</span>
+</div>
+</div>
+<!-- Most Studied Subject -->
+<div class="bg-surface-container-highest text-on-surface p-space-lg rounded-xl shadow-sm relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -right-4 -bottom-4 opacity-5 text-on-surface">
+<span class="material-symbols-outlined text-[120px]">psychology</span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-md tracking-wider uppercase text-on-surface-variant">Top Focus Subject</span>
+<div class="w-8 h-8 rounded-full bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</div>
+</div>
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-md text-headline-md truncate" id="stat-top-subject">No data yet</span>
+</div>
+<span class="font-body-sm text-on-surface-variant" id="stat-top-subject-hours"></span>
+</div>
+<div class="mt-space-lg flex items-center gap-space-xs text-label-sm text-secondary font-medium" id="stat-top-subject-hint">
+<span class="material-symbols-outlined text-[16px]">analytics</span>
+<span>No sessions logged yet</span>
+</div>
+</div>
+</div>
+<!-- Charts Section: Study Hours & Session Statistics -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Study Hours 7-Day Chart (2 Cols) -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-space-xl rounded-xl shadow-md flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-lg">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Study Hours Velocity</h2>
+<p class="font-body-sm text-on-surface-variant">Daily time investment over the past week</p>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-xl">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-sm text-on-surface">Hours Studied</span>
+</div>
+</div>
+<!-- Custom SVG Bar Chart -->
+<div class="w-full h-64 flex items-end justify-between gap-space-md pt-space-xl pb-space-xs px-space-sm relative" id="velocity-chart">
+<!-- Background Grid Lines -->
+<div class="absolute inset-x-0 top-0 h-full flex flex-col justify-between pointer-events-none opacity-20">
+<div class="w-full border-b border-outline-variant"></div>
+<div class="w-full border-b border-outline-variant"></div>
+<div class="w-full border-b border-outline-variant"></div>
+<div class="w-full border-b border-outline-variant"></div>
+</div>
+<!-- Bars rendered dynamically by JS -->
+</div>
+<div class="mt-space-lg pt-space-md border-t border-surface-container flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Average daily focus: <strong id="chart-avg">0 hours</strong></span>
+<span class="text-primary font-medium flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]">info</span>
+          Goal: <span id="chart-goal">4</span>h / day
+        </span>
+</div>
+</div>
+<!-- Session Statistics (1 Col) -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-md flex flex-col justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Session Statistics</h2>
+<p class="font-body-sm text-on-surface-variant">Task completion breakdown</p>
+</div>
+<!-- Circular Progress Ring Graphic -->
+<div class="flex flex-col items-center justify-center my-space-lg relative">
+<div class="w-40 h-40 rounded-full flex items-center justify-center bg-surface-container-low relative shadow-inner">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.8"></path>
+<path class="text-primary" id="ring-progress" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="0, 100" stroke-linecap="round" stroke-width="3.8"></path>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-headline-lg text-headline-lg text-on-surface" id="ring-percent">0%</span>
+<span class="font-label-sm text-on-surface-variant">Completion Rate</span>
+</div>
+</div>
+</div>
+<!-- Stats List -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-body-md text-on-surface">Completed Sessions</span>
+</div>
+<span class="font-headline-sm text-on-surface" id="stat-completed-count">0</span>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-body-md text-on-surface">Pending Sessions</span>
+</div>
+<span class="font-headline-sm text-on-surface" id="stat-pending-count">0</span>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-outline"></span>
+<span class="font-body-md text-on-surface">Total Sessions</span>
+</div>
+<span class="font-headline-sm text-on-surface" id="stat-total-count">0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Subject Performance Completion Percentages -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-space-xl gap-space-md">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Subject Performance &amp; Mastery</h2>
+<p class="font-body-sm text-on-surface-variant">Completion percentages and syllabus milestones across all enrolled courses</p>
+</div>
+</div>
+<!-- Subject Grid / List -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter" id="subject-perf-grid">
+<!-- Rendered dynamically -->
+</div>
+</div>
+<!-- Additional Insights Banner -->
+<div class="bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-container p-space-xl rounded-xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-space-lg relative overflow-hidden" id="insights-banner">
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[200px]">emoji_events</span>
+</div>
+<div class="space-y-space-sm z-10 max-w-xl">
+<div class="inline-flex items-center gap-space-xs bg-on-primary-container/20 px-space-md py-space-xs rounded-full font-label-sm">
+<span class="material-symbols-outlined text-[16px]">military_tech</span>
+<span id="insights-badge">Insight</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg" id="insights-title">Every hour counts. Start your study journey today.</h3>
+<p class="font-body-md opacity-90" id="insights-subtitle">Track your progress and build consistent study habits.</p>
+</div>
+<div class="z-10 flex gap-space-md">
+<button class="bg-surface text-on-surface hover:bg-surface-bright font-label-md px-space-lg py-space-md rounded-xl transition-all shadow-md">
+        Share Badge
+      </button>
+</div>
+</div>
+</div></main></div>
+<script src="js/app.js"></script>
+<script>
+// ============================================================
+// Progress & Analytics — Dynamic rendering with localStorage data
+// ============================================================
+
+// ---------- Subject color palette ----------
+const subjectColors = [
+  { bg: 'bg-primary', text: 'text-on-primary', bar: 'bg-primary', badge: 'bg-primary-container text-on-primary-container', border: 'border-primary' },
+  { bg: 'bg-secondary', text: 'text-on-secondary', bar: 'bg-secondary', badge: 'bg-secondary-container text-on-secondary-container', border: 'border-secondary' },
+  { bg: 'bg-tertiary-container', text: 'text-on-tertiary', bar: 'bg-tertiary-container', badge: 'bg-tertiary-fixed text-on-tertiary-fixed', border: 'border-tertiary-container' },
+  { bg: 'bg-inverse-surface', text: 'text-inverse-on-surface', bar: 'bg-inverse-surface', badge: 'bg-surface-container-highest text-on-surface', border: 'border-inverse-surface' },
+  { bg: 'bg-primary-fixed', text: 'text-on-primary-fixed', bar: 'bg-primary-fixed', badge: 'bg-primary-fixed text-on-primary-fixed', border: 'border-primary-fixed' },
+];
+
+function getSubColor(i) {
+  return subjectColors[i % subjectColors.length];
+}
+
+// ---------- Date helpers ----------
+function getWeekDateRange() {
+  const now = new Date();
+  const weekAgo = new Date(now);
+  weekAgo.setDate(now.getDate() - 6);
+  const opts = { month: 'short', day: 'numeric' };
+  return weekAgo.toLocaleDateString('en-US', opts) + ' - ' + now.toLocaleDateString('en-US', opts);
+}
+
+function getDayFullName(short) {
+  const map = { Sun: 'Sunday', Mon: 'Monday', Tue: 'Tuesday', Wed: 'Wednesday', Thu: 'Thursday', Fri: 'Friday', Sat: 'Saturday' };
+  return map[short] || short;
+}
+
+// ---------- Render: Page Header ----------
+function renderDateRange() {
+  document.getElementById('date-range-display').textContent = 'Last 7 Days (' + getWeekDateRange() + ')';
+}
+
+// ---------- Render: Productivity Highlights ----------
+function renderHighlights() {
+  // Total Study Hours
+  const totalHours = getTotalStudyHours();
+  document.getElementById('stat-total-hours').textContent = totalHours.toFixed(1);
+  if (totalHours > 20) {
+    document.getElementById('stat-total-trend').textContent = 'Top performer this week!';
+  } else if (totalHours > 10) {
+    document.getElementById('stat-total-trend').textContent = 'Great momentum this week';
+  } else if (totalHours > 0) {
+    document.getElementById('stat-total-trend').textContent = 'Building good habits';
+  } else {
+    document.getElementById('stat-total-trend').textContent = 'Start studying to see trends';
+  }
+
+  // Current Streak
+  const streak = getStudyStreak();
+  document.getElementById('stat-streak').textContent = streak;
+  document.getElementById('stat-streak-best').textContent = 'Personal best: ' + streak + ' day' + (streak !== 1 ? 's' : '');
+
+  // Most Productive Day
+  const last7 = getLast7DaysHours();
+  const maxDay = last7.reduce((best, d) => d.hours > best.hours ? d : best, { hours: 0, day: '—' });
+  if (maxDay.hours > 0) {
+    document.getElementById('stat-productive-day').textContent = getDayFullName(maxDay.day);
+    document.getElementById('stat-productive-hours').textContent = maxDay.hours.toFixed(1) + ' hrs';
+    document.getElementById('stat-productive-hint').innerHTML =
+      '<span class="material-symbols-outlined text-[16px]">star</span><span>Peak study day this week</span>';
+  } else {
+    document.getElementById('stat-productive-day').textContent = '—';
+    document.getElementById('stat-productive-hours').textContent = '';
+    document.getElementById('stat-productive-hint').innerHTML =
+      '<span class="material-symbols-outlined text-[16px]">star</span><span>Data will appear after your first session</span>';
+  }
+
+  // Most Studied Subject
+  const sessions = getSessions().filter(s => s.status === 'completed');
+  const subjectHoursMap = {};
+  sessions.forEach(s => {
+    const name = s.subject || 'Unknown';
+    subjectHoursMap[name] = (subjectHoursMap[name] || 0) + (parseFloat(s.duration) || 0);
+  });
+  let topSubject = null;
+  let topSubjectHours = 0;
+  for (const [name, hours] of Object.entries(subjectHoursMap)) {
+    if (hours > topSubjectHours) {
+      topSubjectHours = hours;
+      topSubject = name;
+    }
+  }
+  if (topSubject) {
+    document.getElementById('stat-top-subject').textContent = topSubject;
+    document.getElementById('stat-top-subject-hours').textContent = topSubjectHours.toFixed(1) + ' hours logged';
+    document.getElementById('stat-top-subject-hint').innerHTML =
+      '<span class="material-symbols-outlined text-[16px]">analytics</span><span>Most studied subject</span>';
+  } else {
+    document.getElementById('stat-top-subject').textContent = 'No data yet';
+    document.getElementById('stat-top-subject-hours').textContent = '';
+    document.getElementById('stat-top-subject-hint').innerHTML =
+      '<span class="material-symbols-outlined text-[16px]">analytics</span><span>No sessions logged yet</span>';
+  }
+}
+
+// ---------- Render: Velocity Chart ----------
+function renderVelocityChart() {
+  const data = getLast7DaysHours();
+  const container = document.getElementById('velocity-chart');
+  const maxHours = Math.max(...data.map(d => d.hours), 1);
+  const settings = getSettings();
+  const dailyTarget = settings.dailyTarget || 4;
+  document.getElementById('chart-goal').textContent = dailyTarget;
+
+  // Keep the grid lines, replace bars
+  let html = '';
+  html += '<div class="absolute inset-x-0 top-0 h-full flex flex-col justify-between pointer-events-none opacity-20">';
+  html += '<div class="w-full border-b border-outline-variant"></div>';
+  html += '<div class="w-full border-b border-outline-variant"></div>';
+  html += '<div class="w-full border-b border-outline-variant"></div>';
+  html += '<div class="w-full border-b border-outline-variant"></div>';
+  html += '</div>';
+
+  let totalHours = 0;
+  data.forEach(d => {
+    totalHours += d.hours;
+    const pct = Math.round((d.hours / maxHours) * 100);
+    const isPeak = d.hours === maxHours && d.hours > 0;
+    const barClass = isPeak
+      ? 'bg-primary hover:bg-primary-container transition-all rounded-t-xl shadow-lg'
+      : 'bg-primary-fixed-dim hover:bg-primary transition-all rounded-t-xl';
+    const labelClass = isPeak ? 'font-label-sm text-on-surface font-semibold' : 'font-label-sm text-on-surface-variant';
+    const tooltipLabel = isPeak ? d.hours.toFixed(1) + ' hrs (Peak)' : d.hours.toFixed(1) + ' hrs';
+
+    html += '<div class="flex-1 flex flex-col items-center gap-space-sm relative group h-full justify-end">';
+    html += '<div class="absolute -top-8 bg-inverse-surface text-inverse-on-surface font-label-sm px-space-sm py-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md">' + tooltipLabel + '</div>';
+    html += '<div class="w-full max-w-[48px] ' + barClass + '" style="height: ' + Math.max(pct, 3) + '%;"></div>';
+    html += '<span class="' + labelClass + '">' + d.day + '</span>';
+    html += '</div>';
+  });
+
+  container.innerHTML = html;
+
+  // Average
+  const avg = data.length > 0 ? totalHours / 7 : 0;
+  document.getElementById('chart-avg').textContent = avg.toFixed(1) + ' hours';
+}
+
+// ---------- Render: Session Statistics ----------
+function renderSessionStats() {
+  const completed = getCompletedSessionCount();
+  const pending = getPendingSessionCount();
+  const total = completed + pending;
+  const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+  document.getElementById('ring-percent').textContent = pct + '%';
+  document.getElementById('ring-progress').setAttribute('stroke-dasharray', pct + ', 100');
+  document.getElementById('stat-completed-count').textContent = completed;
+  document.getElementById('stat-pending-count').textContent = pending;
+  document.getElementById('stat-total-count').textContent = total;
+}
+
+// ---------- Render: Subject Performance ----------
+function renderSubjectPerformance() {
+  const subjects = getSubjects();
+  const container = document.getElementById('subject-perf-grid');
+
+  if (subjects.length === 0) {
+    container.innerHTML = emptyState('library_books', 'No subjects yet', 'Add subjects to see performance data here.');
+    container.className = 'grid grid-cols-1';
+    return;
+  }
+
+  container.className = 'grid grid-cols-1 md:grid-cols-2 gap-gutter';
+
+  container.innerHTML = subjects.map((subject, i) => {
+    const progress = getSubjectProgress(subject.name);
+    const total = progress.total;
+    const completed = progress.completed;
+    const pct = progress.percent;
+
+    // Calculate hours studied for this subject
+    const subjectSessions = getSessions().filter(s => s.subject === subject.name && s.status === 'completed');
+    const hoursStudied = subjectSessions.reduce((sum, s) => sum + (parseFloat(s.duration) || 0), 0);
+
+    const color = getSubColor(i);
+    const abbrev = (subject.name || 'S').substring(0, 2).toUpperCase();
+
+    return '<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col justify-between gap-space-md">' +
+      '<div class="flex items-start justify-between">' +
+        '<div class="flex items-center gap-space-md">' +
+          '<div class="w-12 h-12 rounded-xl ' + color.bg + ' ' + color.text + ' flex items-center justify-center font-headline-sm shadow-sm">' + abbrev + '</div>' +
+          '<div>' +
+            '<h3 class="font-headline-sm text-on-surface">' + (subject.name || 'Subject') + '</h3>' +
+            '<p class="font-body-sm text-on-surface-variant">' + hoursStudied.toFixed(1) + ' hrs studied</p>' +
+          '</div>' +
+        '</div>' +
+        '<span class="' + color.badge + ' font-label-sm px-space-md py-space-xs rounded-full">' + pct + '%</span>' +
+      '</div>' +
+      '<div class="space-y-space-xs">' +
+        '<div class="flex justify-between font-label-sm text-on-surface-variant">' +
+          '<span>Syllabus Progress</span>' +
+          '<span>' + completed + ' / ' + total + ' Topics Completed</span>' +
+        '</div>' +
+        '<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">' +
+          '<div class="h-full ' + color.bar + ' rounded-full transition-all duration-500" style="width: ' + pct + '%;"></div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+// ---------- Render: Insights Banner ----------
+function renderInsights() {
+  const streak = getStudyStreak();
+  const totalHours = getTotalStudyHours();
+  const badgeEl = document.getElementById('insights-badge');
+  const titleEl = document.getElementById('insights-title');
+  const subtitleEl = document.getElementById('insights-subtitle');
+
+  if (streak >= 7) {
+    badgeEl.textContent = 'Milestone Unlocked';
+    titleEl.textContent = "You're on a roll! 7+ day streak!";
+    subtitleEl.textContent = 'Consistency is the key to mastery. Keep pushing forward!';
+  } else if (streak >= 3) {
+    badgeEl.textContent = 'Streak Building';
+    titleEl.textContent = 'Great consistency! Keep building your streak.';
+    subtitleEl.textContent = 'You\'re developing a strong study habit. ' + (7 - streak) + ' more days to reach a full week!';
+  } else if (totalHours > 20) {
+    badgeEl.textContent = 'Top Performer';
+    titleEl.textContent = 'Top performer this week!';
+    subtitleEl.textContent = 'You\'ve logged ' + totalHours.toFixed(1) + ' hours. Exceptional dedication to your studies.';
+  } else if (totalHours > 0) {
+    badgeEl.textContent = 'Getting Started';
+    titleEl.textContent = 'Every hour counts. Start your study journey today.';
+    subtitleEl.textContent = 'You\'ve studied ' + totalHours.toFixed(1) + ' hours so far. Build on this momentum!';
+  } else {
+    badgeEl.textContent = 'Get Started';
+    titleEl.textContent = 'Every hour counts. Start your study journey today.';
+    subtitleEl.textContent = 'Track your progress and build consistent study habits.';
+  }
+}
+
+// ---------- Main render ----------
+function renderProgress() {
+  renderDateRange();
+  renderHighlights();
+  renderVelocityChart();
+  renderSessionStats();
+  renderSubjectPerformance();
+  renderInsights();
+}
+
+// ---------- Initialize ----------
+document.addEventListener('DOMContentLoaded', function() {
+  renderProgress();
+});
+</script>
+</body></html>

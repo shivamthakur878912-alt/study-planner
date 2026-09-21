@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {outline: "#7a7583", "surface-variant": "#e6e0ea", "on-tertiary-fixed": "#00201e", "on-tertiary": "#ffffff", "surface-dim": "#ded8e2", "on-primary": "#ffffff", "on-primary-fixed-variant": "#4e329c", "surface-container-highest": "#e6e0ea", surface: "#fdf7ff", "primary-fixed-dim": "#cdbdff", "on-secondary-fixed": "#30111f", "secondary-fixed": "#ffd9e5", "on-secondary-fixed-variant": "#623b4a", "error-container": "#ffdad6", "tertiary-container": "#1b827a", "on-background": "#1c1b21", "secondary-container": "#ffc9db", "primary-container": "#7d63cd", secondary: "#7c5262", "on-primary-container": "#fffbff", "tertiary-fixed-dim": "#7cd6cd", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#00504b", "surface-container-low": "#f8f1fb", "tertiary-fixed": "#98f2e9", "surface-tint": "#664bb5", error: "#ba1a1a", "on-error-container": "#93000a", primary: "#6349b2", "inverse-on-surface": "#f5eff8", "inverse-surface": "#322f37", "inverse-primary": "#cdbdff", tertiary: "#006761", "on-tertiary-container": "#f3fffc", "primary-fixed": "#e8ddff", "surface-bright": "#fdf7ff", "on-surface-variant": "#494552", "surface-container-lowest": "#ffffff", "surface-container-high": "#ece6f0", "on-secondary": "#ffffff", "on-primary-fixed": "#20005e", "on-secondary-container": "#7b5161", "secondary-fixed-dim": "#edb8cb", "surface-container": "#f2ecf6", background: "#fdf7ff", "on-surface": "#1c1b21", "outline-variant": "#cac4d4"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"space-xs": "0.25rem", "space-sm": "0.5rem", "space-lg": "1.5rem", gutter: "1.5rem", margin: "2rem", "space-xl": "2.5rem", "space-md": "1rem"}, fontFamily: {"label-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-md": ["14px", {lineHeight: "20px", fontWeight: "500"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-sm": ["18px", {lineHeight: "24px", fontWeight: "600"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+html.dark body { background: #1c1b21; color: #e6e0ea; }
+html.dark .bg-surface { background-color: #1c1b21; }
+html.dark .bg-surface-container-low { background-color: #211f26; }
+html.dark .bg-surface-container { background-color: #2b2930; }
+html.dark .bg-surface-container-high { background-color: #36343b; }
+html.dark .bg-surface-container-highest { background-color: #413f46; }
+html.dark .bg-surface-container-lowest { background-color: #141218; }
+html.dark .bg-primary-container { background-color: #4a3390; }
+html.dark .bg-secondary-container { background-color: #8a4f60; }
+html.dark .bg-tertiary-container { background-color: #004b47; }
+html.dark .bg-primary-fixed { background-color: #3d2480; }
+html.dark .bg-secondary-fixed { background-color: #6b3a4a; }
+html.dark .bg-tertiary-fixed { background-color: #1a5c57; }
+html.dark .bg-primary\/5, html.dark [class*="bg-primary/5"] { background-color: rgba(138,115,224,0.05); }
+html.dark .bg-primary\/10, html.dark [class*="bg-primary/10"] { background-color: rgba(138,115,224,0.1); }
+html.dark .bg-primary\/20, html.dark [class*="bg-primary/20"] { background-color: rgba(138,115,224,0.2); }
+html.dark .bg-secondary\/5, html.dark [class*="bg-secondary/5"] { background-color: rgba(219,153,171,0.05); }
+html.dark .bg-secondary\/10, html.dark [class*="bg-secondary/10"] { background-color: rgba(219,153,171,0.1); }
+html.dark .bg-surface\/80, html.dark [class*="bg-surface/80"] { background-color: rgba(28,27,33,0.8); }
+html.dark .bg-inverse-surface\/40, html.dark [class*="bg-inverse-surface/40"] { background-color: rgba(230,224,234,0.4); }
+html.dark .bg-inverse-surface\/50, html.dark [class*="bg-inverse-surface/50"] { background-color: rgba(230,224,234,0.5); }
+html.dark .text-on-surface { color: #e6e0ea; }
+html.dark .text-on-surface-variant { color: #cac4d4; }
+html.dark .text-on-primary { color: #ffffff; }
+html.dark .text-on-primary-container { color: #e8ddff; }
+html.dark .text-on-secondary-container { color: #ffd9e5; }
+html.dark .text-on-tertiary-container { color: #f3fffc; }
+html.dark .text-on-primary-fixed { color: #e8ddff; }
+html.dark .text-on-primary-fixed-variant { color: #cdbdff; }
+html.dark .text-on-secondary-fixed { color: #ffd9e5; }
+html.dark .text-on-secondary-fixed-variant { color: #edb8cb; }
+html.dark .text-on-tertiary-fixed { color: #98f2e9; }
+html.dark .text-on-error-container { color: #ffdad6; }
+html.dark .text-inverse-on-surface { color: #1c1b21; }
+html.dark .text-outline { color: #938f99; }
+html.dark .text-primary { color: #cdbdff; }
+html.dark .text-secondary { color: #edb8cb; }
+html.dark .text-tertiary { color: #7cd6cd; }
+html.dark .text-error { color: #ffb4ab; }
+html.dark .text-outline-variant { color: #49454f; }
+html.dark .border-outline-variant\/20, html.dark [class*="border-outline-variant/20"] { border-color: rgba(73,69,79,0.2); }
+html.dark .border-outline-variant\/30, html.dark [class*="border-outline-variant/30"] { border-color: rgba(73,69,79,0.3); }
+html.dark .border-surface-container { border-color: #2b2930; }
+html.dark .ring-primary { --tw-ring-color: #cdbdff; }
+html.dark .hover\:bg-surface-container-high:hover { background-color: #36343b; }
+html.dark .hover\:bg-surface-container:hover { background-color: #2b2930; }
+html.dark .hover\:bg-surface-dim:hover { background-color: #141218; }
+html.dark .peer:checked ~ div { background-color: #8a73c9; }
+</style></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col pt-space-xl pb-space-xl"><div class="px-space-lg mb-space-xl flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined">menu_book</span></div><span class="font-headline-sm text-on-surface">Study Planner</span></div><nav class="flex-1 px-space-md space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="dashboard.html"><span class="material-symbols-outlined mr-space-md">dashboard</span>Dashboard</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="subjects" href="sub.html"><span class="material-symbols-outlined mr-space-md">library_books</span>Subjects</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="study-schedule" href="scheadule.html"><span class="material-symbols-outlined mr-space-md">calendar_today</span>Study Schedule</a><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold" data-path="goals" href="goals.html"><span class="material-symbols-outlined mr-space-md">flag</span>Goals</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="progress" href="progress%20and%20report.html"><span class="material-symbols-outlined mr-space-md">trending_up</span>Progress</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="settings" href="settings.html"><span class="material-symbols-outlined mr-space-md">settings</span>Settings</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center flex-1 max-w-md bg-surface-container rounded-xl px-space-md py-space-xs"><span class="material-symbols-outlined text-on-surface-variant mr-space-sm">search</span><input class="bg-transparent border-none outline-none w-full text-on-surface placeholder:text-on-surface-variant font-body-md" placeholder="Search tasks, subjects, notes..." type="text"/></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded-full hover:bg-surface-container-high text-on-surface-variant transition-colors"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen p-space-xl"><div class="flex flex-col w-full">
+<!-- Top Summary & Action Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-xl">
+  <div>
+    <div class="flex items-center gap-space-sm text-primary font-label-md uppercase tracking-wider mb-space-xs">
+      <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">flag</span>
+      Milestone Tracker
+    </div>
+    <h1 class="font-headline-lg text-on-surface">Goals &amp; Ambitions</h1>
+  </div>
+  <div class="flex items-center gap-space-md">
+    <div class="flex bg-surface-container rounded-xl p-space-xs">
+      <button class="px-space-md py-space-xs rounded-lg font-label-md bg-surface text-on-surface shadow-sm transition-all" id="filter-all" onclick="filterGoals('all')">All Goals</button>
+      <button class="px-space-md py-space-xs rounded-lg font-label-md text-on-surface-variant hover:text-on-surface transition-all" id="filter-active" onclick="filterGoals('active')">In Progress</button>
+      <button class="px-space-md py-space-xs rounded-lg font-label-md text-on-surface-variant hover:text-on-surface transition-all" id="filter-completed" onclick="filterGoals('completed')">Completed</button>
+    </div>
+    <button class="flex items-center gap-space-sm px-space-lg py-space-sm bg-primary text-on-primary rounded-xl font-label-md hover:bg-primary-container transition-all shadow-md" onclick="openModal()">
+      <span class="material-symbols-outlined text-[18px]">add</span>
+      Create Goal
+    </button>
+  </div>
+</div>
+<!-- Progress Overview Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-xl">
+  <div class="bg-surface-container-low rounded-xl p-space-lg relative overflow-hidden shadow-sm flex flex-col justify-between">
+    <div class="absolute right-0 top-0 translate-x-4 -translate-y-4 w-32 h-32 rounded-full bg-primary/5 pointer-events-none"></div>
+    <div>
+      <div class="flex items-center justify-between mb-space-md">
+        <span class="font-label-md text-on-surface-variant uppercase tracking-wider">Daily Target</span>
+        <span class="px-space-sm py-space-xs rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm" id="daily-badge">0h / 4h</span>
+      </div>
+      <h3 class="font-headline-md text-on-surface mb-space-xs">Study daily target</h3>
+      <p class="font-body-sm text-on-surface-variant mb-space-lg" id="daily-remaining">Add sessions to track progress.</p>
+    </div>
+    <div>
+      <div class="flex justify-between text-body-sm font-semibold mb-space-xs text-on-surface">
+        <span>Progress</span><span id="daily-percent">0%</span>
+      </div>
+      <div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="h-full bg-primary rounded-full transition-all duration-500" id="daily-bar" style="width: 0%;"></div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-surface-container-low rounded-xl p-space-lg relative overflow-hidden shadow-sm flex flex-col justify-between">
+    <div class="absolute right-0 top-0 translate-x-4 -translate-y-4 w-32 h-32 rounded-full bg-secondary/5 pointer-events-none"></div>
+    <div>
+      <div class="flex items-center justify-between mb-space-md">
+        <span class="font-label-md text-on-surface-variant uppercase tracking-wider">Weekly Target</span>
+        <span class="px-space-sm py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm" id="weekly-badge">0h / 20h</span>
+      </div>
+      <h3 class="font-headline-md text-on-surface mb-space-xs">Weekly study goal</h3>
+      <p class="font-body-sm text-on-surface-variant mb-space-lg" id="weekly-remaining">Start studying to track weekly progress.</p>
+    </div>
+    <div>
+      <div class="flex justify-between text-body-sm font-semibold mb-space-xs text-on-surface">
+        <span>Progress</span><span id="weekly-percent">0%</span>
+      </div>
+      <div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="h-full bg-secondary rounded-full transition-all duration-500" id="weekly-bar" style="width: 0%;"></div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-surface-container-low rounded-xl p-space-lg relative overflow-hidden shadow-sm flex flex-col justify-between">
+    <div class="absolute right-0 top-0 translate-x-4 -translate-y-4 w-32 h-32 rounded-full bg-tertiary-fixed/20 pointer-events-none"></div>
+    <div>
+      <div class="flex items-center justify-between mb-space-md">
+        <span class="font-label-md text-on-surface-variant uppercase tracking-wider">Milestone Pace</span>
+        <span class="px-space-sm py-space-xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm" id="milestone-badge">0 / 0 Goals</span>
+      </div>
+      <h3 class="font-headline-md text-on-surface mb-space-xs">Goal Completion</h3>
+      <p class="font-body-sm text-on-surface-variant mb-space-lg" id="milestone-desc">Create goals to start tracking.</p>
+    </div>
+    <div>
+      <div class="flex justify-between text-body-sm font-semibold mb-space-xs text-on-surface">
+        <span>Completed</span><span id="milestone-percent">0%</span>
+      </div>
+      <div class="w-full h-2.5 bg-surface-container rounded-full overflow-hidden">
+        <div class="h-full bg-tertiary-container rounded-full transition-all duration-500" id="milestone-bar" style="width: 0%;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Goals Container -->
+<div class="space-y-space-xl" id="goals-container">
+  <!-- Daily Goals -->
+  <div data-category="daily">
+    <div class="flex items-center justify-between mb-space-md">
+      <div class="flex items-center gap-space-sm">
+        <span class="material-symbols-outlined text-primary">today</span>
+        <h2 class="font-headline-md text-on-surface">Daily Goals</h2>
+        <span class="px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-on-surface-variant" id="daily-count">0 active</span>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md" id="daily-goals"></div>
+  </div>
+  <!-- Weekly Goals -->
+  <div data-category="weekly">
+    <div class="flex items-center justify-between mb-space-md">
+      <div class="flex items-center gap-space-sm">
+        <span class="material-symbols-outlined text-secondary">date_range</span>
+        <h2 class="font-headline-md text-on-surface">Weekly Goals</h2>
+        <span class="px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-on-surface-variant" id="weekly-count">0 active</span>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md" id="weekly-goals"></div>
+  </div>
+  <!-- Subject Goals -->
+  <div data-category="subject">
+    <div class="flex items-center justify-between mb-space-md">
+      <div class="flex items-center gap-space-sm">
+        <span class="material-symbols-outlined text-tertiary">library_books</span>
+        <h2 class="font-headline-md text-on-surface">Subject Goals</h2>
+        <span class="px-space-sm py-0.5 rounded-full bg-surface-container font-label-sm text-on-surface-variant" id="subject-count">0 active</span>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md" id="subject-goals"></div>
+  </div>
+</div>
+<!-- Create Goal Modal -->
+<div class="fixed inset-0 bg-inverse-surface/40 backdrop-blur-sm z-50 flex items-center justify-center p-space-md opacity-0 pointer-events-none transition-opacity duration-300" id="goal-modal">
+  <div class="bg-surface-container-lowest rounded-2xl w-full max-w-lg p-space-xl shadow-2xl transform scale-95 transition-transform duration-300" id="modal-content">
+    <div class="flex items-center justify-between mb-space-lg">
+      <h3 class="font-headline-md text-on-surface">Create New Goal</h3>
+      <button class="p-space-xs rounded-full hover:bg-surface-container text-on-surface-variant transition-colors" onclick="closeModal()"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <form class="space-y-space-md" id="create-goal-form" onsubmit="handleCreateGoal(event)">
+      <div>
+        <label class="block font-label-md text-on-surface-variant mb-space-xs">Goal Title</label>
+        <input class="w-full bg-surface-container border-none rounded-xl px-space-md py-space-sm text-on-surface placeholder:text-on-surface-variant focus:ring-2 focus:ring-primary outline-none font-body-md transition-all" id="goal-title" placeholder="e.g., Read 3 chapters of Economics" required="" type="text"/>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+        <div>
+          <label class="block font-label-md text-on-surface-variant mb-space-xs">Category</label>
+          <select class="w-full bg-surface-container border-none rounded-xl px-space-md py-space-sm text-on-surface focus:ring-2 focus:ring-primary outline-none font-body-md transition-all" id="goal-category">
+            <option value="daily">Daily Goal</option>
+            <option value="weekly">Weekly Goal</option>
+            <option value="subject">Subject Goal</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-label-md text-on-surface-variant mb-space-xs">Target Metric</label>
+          <input class="w-full bg-surface-container border-none rounded-xl px-space-md py-space-sm text-on-surface placeholder:text-on-surface-variant focus:ring-2 focus:ring-primary outline-none font-body-md transition-all" id="goal-target" min="1" placeholder="5" required="" type="number"/>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+        <div>
+          <label class="block font-label-md text-on-surface-variant mb-space-xs">Unit Name</label>
+          <input class="w-full bg-surface-container border-none rounded-xl px-space-md py-space-sm text-on-surface placeholder:text-on-surface-variant focus:ring-2 focus:ring-primary outline-none font-body-md transition-all" id="goal-unit" placeholder="chapters, hours, pages" required="" type="text"/>
+        </div>
+        <div>
+          <label class="block font-label-md text-on-surface-variant mb-space-xs">Deadline</label>
+          <input class="w-full bg-surface-container border-none rounded-xl px-space-md py-space-sm text-on-surface focus:ring-2 focus:ring-primary outline-none font-body-md transition-all" id="goal-deadline" required="" type="date"/>
+        </div>
+      </div>
+      <div class="flex items-center justify-end gap-space-sm pt-space-md">
+        <button class="px-space-lg py-space-sm rounded-xl font-label-md text-on-surface-variant hover:bg-surface-container transition-all" onclick="closeModal()" type="button">Cancel</button>
+        <button class="px-space-lg py-space-sm rounded-xl font-label-md bg-primary text-on-primary hover:bg-primary-container transition-all shadow-md" type="submit">Save Goal</button>
+      </div>
+    </form>
+  </div>
+</div>
+<script src="js/app.js"></script>
+<script>
+let currentFilter = 'all';
+
+document.addEventListener('DOMContentLoaded', function() {
+  updateOverviewCards();
+  renderGoals();
+});
+
+function updateOverviewCards() {
+  var settings = getSettings();
+  var dailyTarget = settings.dailyTarget || 4;
+  var weeklyTarget = settings.weeklyTarget || 20;
+
+  var todayHours = getTodayStudyHours();
+  var dailyPct = Math.min(100, Math.round((todayHours / dailyTarget) * 100));
+  document.getElementById('daily-badge').textContent = formatHours(todayHours) + ' / ' + formatHours(dailyTarget);
+  document.getElementById('daily-percent').textContent = dailyPct + '%';
+  document.getElementById('daily-bar').style.width = dailyPct + '%';
+  document.getElementById('daily-remaining').textContent = dailyPct >= 100 ? 'Daily target reached!' : 'Remaining: ' + formatHours(Math.max(0, dailyTarget - todayHours));
+
+  var weekHours = getWeeklyStudyHours();
+  var weeklyPct = Math.min(100, Math.round((weekHours / weeklyTarget) * 100));
+  document.getElementById('weekly-badge').textContent = formatHours(weekHours) + ' / ' + formatHours(weeklyTarget);
+  document.getElementById('weekly-percent').textContent = weeklyPct + '%';
+  document.getElementById('weekly-bar').style.width = weeklyPct + '%';
+  document.getElementById('weekly-remaining').textContent = weeklyPct >= 100 ? 'Weekly target reached!' : 'Remaining: ' + formatHours(Math.max(0, weeklyTarget - weekHours));
+
+  var goals = getGoals();
+  var totalGoals = goals.length;
+  var completedGoals = goals.filter(function(g) { return g.status === 'completed'; }).length;
+  var milestonePct = totalGoals > 0 ? Math.round((completedGoals / totalGoals) * 100) : 0;
+  document.getElementById('milestone-badge').textContent = completedGoals + ' / ' + totalGoals + ' Goals';
+  document.getElementById('milestone-percent').textContent = milestonePct + '%';
+  document.getElementById('milestone-bar').style.width = milestonePct + '%';
+  document.getElementById('milestone-desc').textContent = totalGoals === 0 ? 'Create goals to start tracking.' : completedGoals + ' of ' + totalGoals + ' goals completed';
+}
+
+function renderGoals() {
+  var goals = getGoals();
+  var dailyGoals = goals.filter(function(g) { return g.category === 'daily'; });
+  var weeklyGoals = goals.filter(function(g) { return g.category === 'weekly'; });
+  var subjectGoals = goals.filter(function(g) { return g.category === 'subject'; });
+
+  if (currentFilter === 'active') {
+    dailyGoals = dailyGoals.filter(function(g) { return g.status !== 'completed'; });
+    weeklyGoals = weeklyGoals.filter(function(g) { return g.status !== 'completed'; });
+    subjectGoals = subjectGoals.filter(function(g) { return g.status !== 'completed'; });
+  } else if (currentFilter === 'completed') {
+    dailyGoals = dailyGoals.filter(function(g) { return g.status === 'completed'; });
+    weeklyGoals = weeklyGoals.filter(function(g) { return g.status === 'completed'; });
+    subjectGoals = subjectGoals.filter(function(g) { return g.status === 'completed'; });
+  }
+
+  renderGoalSection('daily-goals', dailyGoals, 'daily');
+  renderGoalSection('weekly-goals', weeklyGoals, 'weekly');
+  renderGoalSection('subject-goals', subjectGoals, 'subject');
+
+  var allDaily = goals.filter(function(g) { return g.category === 'daily' && g.status !== 'completed'; });
+  var allWeekly = goals.filter(function(g) { return g.category === 'weekly' && g.status !== 'completed'; });
+  var allSubject = goals.filter(function(g) { return g.category === 'subject' && g.status !== 'completed'; });
+  document.getElementById('daily-count').textContent = allDaily.length + ' active';
+  document.getElementById('weekly-count').textContent = allWeekly.length + ' active';
+  document.getElementById('subject-count').textContent = allSubject.length + ' active';
+
+  updateOverviewCards();
+}
+
+function renderGoalSection(containerId, goals, category) {
+  var container = document.getElementById(containerId);
+  if (goals.length === 0) {
+    var icons = { daily: 'bolt', weekly: 'date_range', subject: 'library_books' };
+    var titles = { daily: 'No daily goals yet', weekly: 'No weekly goals yet', subject: 'No subject goals yet' };
+    var subs = { daily: 'Create a daily goal to focus on today\'s tasks.', weekly: 'Create a weekly goal to plan your week.', subject: 'Create a subject goal to track your learning.' };
+    container.innerHTML = emptyState(icons[category], titles[category], subs[category]);
+    return;
+  }
+  var html = '';
+  goals.forEach(function(goal) { html += buildGoalCard(goal); });
+  container.innerHTML = html;
+}
+
+function buildGoalCard(goal) {
+  var catBadge = goal.category === 'daily' ? 'bg-primary-fixed text-on-primary-fixed-variant' : goal.category === 'weekly' ? 'bg-secondary-fixed text-on-secondary-fixed' : 'bg-tertiary-fixed text-on-tertiary-fixed';
+  var catLabel = goal.category === 'daily' ? 'Daily Focus' : goal.category === 'weekly' ? 'Weekly Target' : 'Subject Goal';
+  var barColor = goal.category === 'daily' ? 'bg-primary' : goal.category === 'weekly' ? 'bg-secondary' : 'bg-tertiary';
+  var current = goal.current || 0;
+  var target = goal.target || 1;
+  var pct = Math.min(100, Math.round((current / target) * 100));
+  var isCompleted = goal.status === 'completed';
+  var deadlineStr = goal.deadline ? formatDate(goal.deadline) : 'No deadline';
+
+  var statusHTML = isCompleted
+    ? '<span class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-label-sm"><span class="material-symbols-outlined text-[14px]" style="font-variation-settings: \'FILL\' 1;">check_circle</span> Completed</span>'
+    : '<span class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm"><span class="w-2 h-2 rounded-full ' + barColor + ' animate-pulse"></span> In Progress</span>';
+
+  var barBg = isCompleted ? 'bg-emerald-500' : barColor;
+  var pctColor = isCompleted ? 'text-emerald-600' : (goal.category === 'daily' ? 'text-primary' : goal.category === 'weekly' ? 'text-secondary' : 'text-tertiary');
+
+  return '<div class="goal-card bg-surface-container-low rounded-xl p-space-lg shadow-sm transition-all hover:shadow-md" data-goal-id="' + goal.id + '" data-status="' + (isCompleted ? 'completed' : 'active') + '">' +
+    '<div class="flex items-start justify-between gap-space-md mb-space-md">' +
+      '<div><span class="inline-block px-space-sm py-0.5 rounded-md ' + catBadge + ' font-label-sm mb-space-xs">' + catLabel + '</span>' +
+      '<h3 class="font-headline-sm text-on-surface">' + escapeHtml(goal.title) + '</h3></div>' +
+      '<div class="flex items-center gap-space-sm">' +
+        '<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">schedule</span> ' + deadlineStr + '</span>' +
+        '<button onclick="deleteGoalCard(\'' + goal.id + '\')" class="p-space-xs text-on-surface-variant hover:text-error transition-colors" title="Delete"><span class="material-symbols-outlined text-[18px]">delete</span></button>' +
+      '</div>' +
+    '</div>' +
+    '<div class="mb-space-md">' +
+      '<div class="flex justify-between text-body-sm mb-space-xs text-on-surface-variant"><span>Progress: <strong class="text-on-surface">' + current + ' / ' + target + ' ' + escapeHtml(goal.unit || '') + '</strong></span><span class="font-semibold ' + pctColor + '">' + pct + '%</span></div>' +
+      '<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden"><div class="h-full ' + barBg + ' rounded-full transition-all duration-500" style="width: ' + pct + '%;"></div></div>' +
+    '</div>' +
+    '<div class="flex items-center justify-between pt-space-xs">' + statusHTML +
+      '<div class="flex items-center gap-space-sm">' +
+        '<button onclick="incrementGoalProgress(\'' + goal.id + '\', 1)" ' + (isCompleted ? 'disabled style="opacity:0.4;cursor:not-allowed"' : '') + ' class="px-space-sm py-1 bg-surface-container-high text-on-surface rounded-lg font-label-sm hover:bg-primary hover:text-on-primary transition-all">+1</button>' +
+        '<button onclick="toggleGoalComplete(\'' + goal.id + '\')" class="px-space-sm py-1 ' + (isCompleted ? 'bg-surface-container-high text-on-surface-variant' : 'bg-primary text-on-primary') + ' rounded-lg font-label-sm hover:bg-primary-container transition-all">' + (isCompleted ? 'Reopen' : 'Mark Complete') + '</button>' +
+      '</div>' +
+    '</div>' +
+  '</div>';
+}
+
+function escapeHtml(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
+function filterGoals(filter) {
+  currentFilter = filter;
+  var allBtn = document.getElementById('filter-all');
+  var activeBtn = document.getElementById('filter-active');
+  var completedBtn = document.getElementById('filter-completed');
+  [allBtn, activeBtn, completedBtn].forEach(function(btn) {
+    btn.className = 'px-space-md py-space-xs rounded-lg font-label-md text-on-surface-variant hover:text-on-surface transition-all';
+  });
+  if (filter === 'all') allBtn.className = 'px-space-md py-space-xs rounded-lg font-label-md bg-surface text-on-surface shadow-sm transition-all';
+  else if (filter === 'active') activeBtn.className = 'px-space-md py-space-xs rounded-lg font-label-md bg-surface text-on-surface shadow-sm transition-all';
+  else if (filter === 'completed') completedBtn.className = 'px-space-md py-space-xs rounded-lg font-label-md bg-surface text-on-surface shadow-sm transition-all';
+  renderGoals();
+}
+
+function openModal() {
+  var modal = document.getElementById('goal-modal');
+  var content = document.getElementById('modal-content');
+  modal.classList.remove('opacity-0', 'pointer-events-none');
+  content.classList.remove('scale-95');
+  content.classList.add('scale-100');
+  document.getElementById('goal-deadline').min = todayISO();
+}
+
+function closeModal() {
+  var modal = document.getElementById('goal-modal');
+  var content = document.getElementById('modal-content');
+  modal.classList.add('opacity-0', 'pointer-events-none');
+  content.classList.remove('scale-100');
+  content.classList.add('scale-95');
+  document.getElementById('create-goal-form').reset();
+}
+
+document.getElementById('goal-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+function handleCreateGoal(event) {
+  event.preventDefault();
+  var title = document.getElementById('goal-title').value.trim();
+  var category = document.getElementById('goal-category').value;
+  var target = parseInt(document.getElementById('goal-target').value, 10);
+  var unit = document.getElementById('goal-unit').value.trim();
+  var deadline = document.getElementById('goal-deadline').value;
+  if (!title || !category || !target || !unit || !deadline) return;
+  addGoal({ title: title, category: category, target: target, current: 0, unit: unit, deadline: deadline });
+  closeModal();
+  renderGoals();
+}
+
+function incrementGoalProgress(goalId, step) {
+  var goals = getGoals();
+  var goal = goals.find(function(g) { return g.id === goalId; });
+  if (!goal || goal.status === 'completed') return;
+  var newCurrent = Math.min(goal.target, (goal.current || 0) + step);
+  updateGoal(goalId, { current: newCurrent });
+  renderGoals();
+}
+
+function toggleGoalComplete(goalId) {
+  var goals = getGoals();
+  var goal = goals.find(function(g) { return g.id === goalId; });
+  if (!goal) return;
+  var newStatus = goal.status === 'completed' ? 'active' : 'completed';
+  var updates = { status: newStatus };
+  if (newStatus === 'completed') updates.current = goal.target;
+  updateGoal(goalId, updates);
+  renderGoals();
+}
+
+function deleteGoalCard(goalId) {
+  if (!confirm('Are you sure you want to delete this goal?')) return;
+  deleteGoal(goalId);
+  renderGoals();
+}
+</script>
+</div></main></div></body></html>

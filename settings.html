@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {outline: "#7a7583", "surface-variant": "#e6e0ea", "on-tertiary-fixed": "#00201e", "on-tertiary": "#ffffff", "surface-dim": "#ded8e2", "on-primary": "#ffffff", "on-primary-fixed-variant": "#4e329c", "surface-container-highest": "#e6e0ea", surface: "#fdf7ff", "primary-fixed-dim": "#cdbdff", "on-secondary-fixed": "#30111f", "secondary-fixed": "#ffd9e5", "on-secondary-fixed-variant": "#623b4a", "error-container": "#ffdad6", "tertiary-container": "#1b827a", "on-background": "#1c1b21", "secondary-container": "#ffc9db", "primary-container": "#7d63cd", secondary: "#7c5262", "on-primary-container": "#fffbff", "tertiary-fixed-dim": "#7cd6cd", "on-error": "#ffffff", "on-tertiary-fixed-variant": "#00504b", "surface-container-low": "#f8f1fb", "tertiary-fixed": "#98f2e9", "surface-tint": "#664bb5", error: "#ba1a1a", "on-error-container": "#93000a", primary: "#6349b2", "inverse-on-surface": "#f5eff8", "inverse-surface": "#322f37", "inverse-primary": "#cdbdff", tertiary: "#006761", "on-tertiary-container": "#f3fffc", "primary-fixed": "#e8ddff", "surface-bright": "#fdf7ff", "on-surface-variant": "#494552", "surface-container-lowest": "#ffffff", "surface-container-high": "#ece6f0", "on-secondary": "#ffffff", "on-primary-fixed": "#20005e", "on-secondary-container": "#7b5161", "secondary-fixed-dim": "#edb8cb", "surface-container": "#f2ecf6", background: "#fdf7ff", "on-surface": "#1c1b21", "outline-variant": "#cac4d4"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"space-xs": "0.25rem", "space-sm": "0.5rem", "space-lg": "1.5rem", gutter: "1.5rem", margin: "2rem", "space-xl": "2.5rem", "space-md": "1rem"}, fontFamily: {"label-md": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "label-sm": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], headline: ["Plus Jakarta Sans"], display: ["Plus Jakarta Sans"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-md": ["14px", {lineHeight: "20px", fontWeight: "500"}], "headline-lg": ["32px", {lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-sm": ["18px", {lineHeight: "24px", fontWeight: "600"}], "body-lg": ["16px", {lineHeight: "24px", fontWeight: "400"}], "label-sm": ["12px", {lineHeight: "16px", fontWeight: "500"}], "body-sm": ["12px", {lineHeight: "16px", fontWeight: "400"}], "headline-md": ["24px", {lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "20px", fontWeight: "400"}]}}}};</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+html.dark body { background: #1c1b21; color: #e6e0ea; }
+html.dark .bg-surface { background-color: #1c1b21; }
+html.dark .bg-surface-container-low { background-color: #211f26; }
+html.dark .bg-surface-container { background-color: #2b2930; }
+html.dark .bg-surface-container-high { background-color: #36343b; }
+html.dark .bg-surface-container-highest { background-color: #413f46; }
+html.dark .bg-surface-container-lowest { background-color: #141218; }
+html.dark .bg-primary-container { background-color: #4a3390; }
+html.dark .bg-secondary-container { background-color: #8a4f60; }
+html.dark .bg-tertiary-container { background-color: #004b47; }
+html.dark .bg-primary-fixed { background-color: #3d2480; }
+html.dark .bg-secondary-fixed { background-color: #6b3a4a; }
+html.dark .bg-tertiary-fixed { background-color: #1a5c57; }
+html.dark .bg-primary\/5, html.dark [class*="bg-primary/5"] { background-color: rgba(138,115,224,0.05); }
+html.dark .bg-primary\/10, html.dark [class*="bg-primary/10"] { background-color: rgba(138,115,224,0.1); }
+html.dark .bg-primary\/20, html.dark [class*="bg-primary/20"] { background-color: rgba(138,115,224,0.2); }
+html.dark .bg-secondary\/5, html.dark [class*="bg-secondary/5"] { background-color: rgba(219,153,171,0.05); }
+html.dark .bg-secondary\/10, html.dark [class*="bg-secondary/10"] { background-color: rgba(219,153,171,0.1); }
+html.dark .bg-surface\/80, html.dark [class*="bg-surface/80"] { background-color: rgba(28,27,33,0.8); }
+html.dark .bg-inverse-surface\/40, html.dark [class*="bg-inverse-surface/40"] { background-color: rgba(230,224,234,0.4); }
+html.dark .bg-inverse-surface\/50, html.dark [class*="bg-inverse-surface/50"] { background-color: rgba(230,224,234,0.5); }
+html.dark .text-on-surface { color: #e6e0ea; }
+html.dark .text-on-surface-variant { color: #cac4d4; }
+html.dark .text-on-primary { color: #ffffff; }
+html.dark .text-on-primary-container { color: #e8ddff; }
+html.dark .text-on-secondary-container { color: #ffd9e5; }
+html.dark .text-on-tertiary-container { color: #f3fffc; }
+html.dark .text-on-primary-fixed { color: #e8ddff; }
+html.dark .text-on-primary-fixed-variant { color: #cdbdff; }
+html.dark .text-on-secondary-fixed { color: #ffd9e5; }
+html.dark .text-on-secondary-fixed-variant { color: #edb8cb; }
+html.dark .text-on-tertiary-fixed { color: #98f2e9; }
+html.dark .text-on-error-container { color: #ffdad6; }
+html.dark .text-inverse-on-surface { color: #1c1b21; }
+html.dark .text-outline { color: #938f99; }
+html.dark .text-primary { color: #cdbdff; }
+html.dark .text-secondary { color: #edb8cb; }
+html.dark .text-tertiary { color: #7cd6cd; }
+html.dark .text-error { color: #ffb4ab; }
+html.dark .text-outline-variant { color: #49454f; }
+html.dark .border-outline-variant\/20, html.dark [class*="border-outline-variant/20"] { border-color: rgba(73,69,79,0.2); }
+html.dark .border-outline-variant\/30, html.dark [class*="border-outline-variant/30"] { border-color: rgba(73,69,79,0.3); }
+html.dark .border-surface-container { border-color: #2b2930; }
+html.dark .ring-primary { --tw-ring-color: #cdbdff; }
+html.dark .hover\:bg-surface-container-high:hover { background-color: #36343b; }
+html.dark .hover\:bg-surface-container:hover { background-color: #2b2930; }
+html.dark .hover\:bg-surface-dim:hover { background-color: #141218; }
+html.dark .peer:checked ~ div { background-color: #8a73c9; }
+</style></head><body class="bg-surface font-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col pt-space-xl pb-space-xl"><div class="px-space-lg mb-space-xl flex items-center gap-space-sm"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined">menu_book</span></div><span class="font-headline-sm text-on-surface">Study Planner</span></div><nav class="flex-1 px-space-md space-y-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold"><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="dashboard.html"><span class="material-symbols-outlined mr-space-md">dashboard</span>Dashboard</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="subjects" href="sub.html"><span class="material-symbols-outlined mr-space-md">library_books</span>Subjects</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="study-schedule" href="scheadule.html"><span class="material-symbols-outlined mr-space-md">calendar_today</span>Study Schedule</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="goals" href="goals.html"><span class="material-symbols-outlined mr-space-md">flag</span>Goals</a><a class="flex items-center px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="progress" href="progress%20and%20report.html"><span class="material-symbols-outlined mr-space-md">trending_up</span>Progress</a><a aria-current="page" class="flex items-center px-space-md py-space-sm rounded-xl transition-all bg-primary-container text-on-primary-container font-semibold" data-path="settings" href="settings.html"><span class="material-symbols-outlined mr-space-md">settings</span>Settings</a></nav></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center flex-1 max-w-md bg-surface-container rounded-xl px-space-md py-space-xs"><span class="material-symbols-outlined text-on-surface-variant mr-space-sm">search</span><input class="bg-transparent border-none outline-none w-full text-on-surface placeholder:text-on-surface-variant font-body-md" placeholder="Search tasks, subjects, notes..." type="text"/></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded-full hover:bg-surface-container-high text-on-surface-variant transition-colors"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen p-space-xl"><div class="flex flex-col w-full max-w-6xl mx-auto pb-24">
+<!-- Top Heading / Banner -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-primary font-label-md uppercase tracking-wider mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+        Preferences &amp; Config
+      </div>
+<h1 class="font-headline-lg text-on-surface">Account Settings</h1>
+<p class="font-body-md text-on-surface-variant mt-space-xs">Manage your student profile, study targets, notification triggers, and app appearance.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-sm rounded-xl font-label-md bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" id="discard-btn">
+        Discard Changes
+      </button>
+<button class="px-space-lg py-space-sm rounded-xl font-label-md bg-primary hover:bg-primary/90 text-on-primary shadow-md hover:shadow-lg transition-all flex items-center gap-space-xs" id="save-btn">
+<span class="material-symbols-outlined text-[18px]">check</span>
+        Save Changes
+      </button>
+</div>
+</div>
+<!-- Settings Grid (Bento Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Left Column: Student Profile (Spans 2 cols on desktop) -->
+<div class="lg:col-span-2 bg-surface-container-low rounded-2xl p-space-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-on-surface">Student Profile</h2>
+<p class="font-body-sm text-on-surface-variant">Update your personal details and academic persona.</p>
+</div>
+</div>
+<span class="px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm">Active Account</span>
+</div>
+<!-- Avatar & Info -->
+<div class="flex flex-col sm:flex-row items-center gap-space-xl mb-space-xl pb-space-xl border-b border-outline-variant/20">
+<div class="relative group">
+<div class="w-24 h-24 rounded-2xl bg-surface-container-high overflow-hidden flex items-center justify-center shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Close up portrait of a focused university student with glasses smiling gently against a softly blurred library background with warm indoor lighting and clean minimal composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4wf9A3eF-ZCXyJ67v6pa-W_qqhZgUcGJ9ggMoqPaP1jfSUeBIRL1U1cJGcl8L5-pJZK2FztOG0uhM-Lhvch5QLIpvkVObvqV7KWwqvhramROOf5vsWc6z4inYPfoXTCs4d9DZm6ODU0R19vV_Rc0fbUlhi9SrvvUnZ42G9oUyrJVET5SDV7sw7wsgD9llFUROx4bZZ2GPVr2W-o_GdMHm9ramEu15zO0MTc-4Zie4Cfxjsc7RbBs3zw"/>
+</div>
+<button class="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+<div class="flex-1 w-full space-y-space-md">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-on-surface mb-space-xs">Full Name</label>
+<input id="settings-name" class="w-full bg-surface-container rounded-xl px-space-md py-space-sm font-body-md text-on-surface border border-outline-variant/30 focus:border-primary focus:outline-none transition-colors" type="text" value=""/>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-space-xs">Email Address</label>
+<input id="settings-email" class="w-full bg-surface-container rounded-xl px-space-md py-space-sm font-body-md text-on-surface border border-outline-variant/30 focus:border-primary focus:outline-none transition-colors" type="email" value=""/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-on-surface mb-space-xs">Major / Program</label>
+<input id="settings-major" class="w-full bg-surface-container rounded-xl px-space-md py-space-sm font-body-md text-on-surface border border-outline-variant/30 focus:border-primary focus:outline-none transition-colors" type="text" value=""/>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-space-xs">Academic Year</label>
+<select id="settings-year" class="w-full bg-surface-container rounded-xl px-space-md py-space-sm font-body-md text-on-surface border border-outline-variant/30 focus:border-primary focus:outline-none transition-colors">
+<option>Freshman (Year 1)</option>
+<option>Sophomore (Year 2)</option>
+<option>Junior (Year 3)</option>
+<option>Senior (Year 4)</option>
+<option>Graduate Student</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bio / Quick Note -->
+<div>
+<label class="block font-label-md text-on-surface mb-space-xs">Bio / Academic Goal Statement</label>
+<textarea id="settings-bio" class="w-full bg-surface-container rounded-xl px-space-md py-space-sm font-body-md text-on-surface border border-outline-variant/30 focus:border-primary focus:outline-none transition-colors resize-none" rows="2"></textarea>
+</div>
+</div>
+<!-- Right Column: Theme Preference -->
+<div class="bg-surface-container-low rounded-2xl p-space-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-lg">
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-on-surface">Appearance</h2>
+<p class="font-body-sm text-on-surface-variant">Customize your visual interface.</p>
+</div>
+</div>
+<div class="space-y-space-md">
+<label class="flex items-center justify-between p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary">light_mode</span>
+<div>
+<span class="font-label-md text-on-surface block">Light Mode</span>
+<span class="font-body-sm text-on-surface-variant">Clean bright indigo &amp; slate palette</span>
+</div>
+</div>
+<input checked="" class="w-4 h-4 text-primary focus:ring-primary" name="theme" type="radio" value="light" id="theme-light"/>
+</label>
+<label class="flex items-center justify-between p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-secondary">dark_mode</span>
+<div>
+<span class="font-label-md text-on-surface block">Dark Mode</span>
+<span class="font-body-sm text-on-surface-variant">Deep high-contrast immersive dark</span>
+</div>
+</div>
+<input class="w-4 h-4 text-primary focus:ring-primary" name="theme" type="radio" value="dark" id="theme-dark"/>
+</label>
+<label class="flex items-center justify-between p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high cursor-pointer transition-colors">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-outline">settings_system_daydream</span>
+<div>
+<span class="font-label-md text-on-surface block">System Default</span>
+<span class="font-body-sm text-on-surface-variant">Matches your OS preference</span>
+</div>
+</div>
+<input class="w-4 h-4 text-primary focus:ring-primary" name="theme" type="radio" value="system" id="theme-system"/>
+</label>
+</div>
+</div>
+<div class="mt-space-lg p-space-md rounded-xl bg-surface-container/50 flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary">info</span>
+<span class="font-body-sm text-on-surface-variant">Dynamic accent colors adapt smoothly across all study views.</span>
+</div>
+</div>
+<!-- Bottom Left: Study Goal Preferences -->
+<div class="bg-surface-container-low rounded-2xl p-space-xl shadow-sm">
+<div class="flex items-center gap-space-sm mb-space-lg">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined">flag</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-on-surface">Study Goal Targets</h2>
+<p class="font-body-sm text-on-surface-variant">Configure daily and weekly time quotas.</p>
+</div>
+</div>
+<div class="space-y-space-lg">
+<div>
+<div class="flex justify-between items-center mb-space-xs">
+<span class="font-label-md text-on-surface">Daily Study Target</span>
+<span class="font-label-md text-primary font-semibold" id="daily-hours-val">4.5 Hours</span>
+</div>
+<input id="daily-target" class="w-full accent-primary cursor-pointer" max="10" min="1" step="0.5" type="range" value="4.5"/>
+<div class="flex justify-between font-body-sm text-on-surface-variant mt-1">
+<span>1 hr</span>
+<span>5 hrs</span>
+<span>10 hrs</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-space-xs">Focus Session Duration (Pomodoro)</label>
+<select id="pomodoro-duration" class="w-full bg-surface-container rounded-xl px-space-md py-space-sm font-body-md text-on-surface border border-outline-variant/30 focus:border-primary focus:outline-none transition-colors">
+<option value="25">25 min work / 5 min break</option>
+<option value="45">45 min work / 10 min break</option>
+<option value="60">60 min work / 15 min break</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-space-xs">Weekly Review Day</label>
+<select id="weekly-review-day" class="w-full bg-surface-container rounded-xl px-space-md py-space-sm font-body-md text-on-surface border border-outline-variant/30 focus:border-primary focus:outline-none transition-colors">
+<option selected="">Sunday Evening</option>
+<option>Saturday Morning</option>
+<option>Friday Afternoon</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Bottom Middle: Notification Settings -->
+<div class="bg-surface-container-low rounded-2xl p-space-xl shadow-sm">
+<div class="flex items-center gap-space-sm mb-space-lg">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined">notifications_active</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-on-surface">Notifications</h2>
+<p class="font-body-sm text-on-surface-variant">Control alerts and reminder schedules.</p>
+</div>
+</div>
+<div class="space-y-space-md">
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container">
+<div>
+<span class="font-label-md text-on-surface block">Study Reminders</span>
+<span class="font-body-sm text-on-surface-variant">Notify when daily target is unmet</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input id="notify-reminders" checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container">
+<div>
+<span class="font-label-md text-on-surface block">Exam &amp; Quiz Alerts</span>
+<span class="font-body-sm text-on-surface-variant">24 hours before due date</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input id="notify-exam" checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container">
+<div>
+<span class="font-label-md text-on-surface block">Weekly Progress Summary</span>
+<span class="font-body-sm text-on-surface-variant">Email report every Monday</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input id="notify-weekly" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container">
+<div>
+<span class="font-label-md text-on-surface block">Sound Effects</span>
+<span class="font-body-sm text-on-surface-variant">Chimes for completed Pomodoro</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input id="notify-sounds" checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Bottom Right: Account Management -->
+<div class="bg-surface-container-low rounded-2xl p-space-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-sm mb-space-lg">
+<div class="w-10 h-10 rounded-xl bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined">security</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-on-surface">Account Management</h2>
+<p class="font-body-sm text-on-surface-variant">Security and data controls.</p>
+</div>
+</div>
+<div class="space-y-space-md">
+<button id="change-password-btn" class="w-full flex items-center justify-between p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors text-left">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary">lock_reset</span>
+<div>
+<span class="font-label-md block">Change Password</span>
+<span class="font-body-sm text-on-surface-variant">Last changed 3 months ago</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+<button id="export-btn" class="w-full flex items-center justify-between p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors text-left">
+<div class="flex items-center gap-space-md">
+<span class="material-symbols-outlined text-primary">download</span>
+<div>
+<span class="font-label-md block">Export Study Data</span>
+<span class="font-body-sm text-on-surface-variant">Download all tasks &amp; logs (JSON/CSV)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="pt-space-lg mt-space-lg border-t border-outline-variant/20">
+<button id="deactivate-btn" class="w-full py-space-sm px-space-md rounded-xl bg-error-container hover:bg-error/20 text-on-error-container font-label-md transition-colors flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+          Deactivate Account
+        </button>
+</div>
+</div>
+</div>
+<!-- Toast Notification (Hidden by default) -->
+<div class="fixed bottom-8 right-8 z-50 transform translate-y-24 opacity-0 transition-all duration-300 ease-out flex items-center gap-space-md bg-inverse-surface text-inverse-on-surface px-space-lg py-space-md rounded-2xl shadow-xl" id="toast">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-inverse-on-surface text-sm">Settings Saved Successfully</h4>
+<p class="font-body-sm text-inverse-on-surface/70">All your preferences have been updated.</p>
+</div>
+</div>
+<script src="js/app.js"></script>
+<script>
+    // ---- DOM refs ----
+    const saveBtn = document.getElementById('save-btn');
+    const discardBtn = document.getElementById('discard-btn');
+    const toast = document.getElementById('toast');
+    const exportBtn = document.getElementById('export-btn');
+    const deactivateBtn = document.getElementById('deactivate-btn');
+    const changePasswordBtn = document.getElementById('change-password-btn');
+
+    // Form fields
+    const nameInput = document.getElementById('settings-name');
+    const emailInput = document.getElementById('settings-email');
+    const majorInput = document.getElementById('settings-major');
+    const yearSelect = document.getElementById('settings-year');
+    const bioInput = document.getElementById('settings-bio');
+    const dailySlider = document.getElementById('daily-target');
+    const dailyVal = document.getElementById('daily-hours-val');
+    const pomodoroSelect = document.getElementById('pomodoro-duration');
+    const weeklyReviewSelect = document.getElementById('weekly-review-day');
+    const notifyReminders = document.getElementById('notify-reminders');
+    const notifyExam = document.getElementById('notify-exam');
+    const notifyWeekly = document.getElementById('notify-weekly');
+    const notifySounds = document.getElementById('notify-sounds');
+    const themeLight = document.getElementById('theme-light');
+    const themeDark = document.getElementById('theme-dark');
+    const themeSystem = document.getElementById('theme-system');
+
+    // ---- Helpers ----
+    function populateFields(settings) {
+      nameInput.value = settings.name || '';
+      emailInput.value = settings.email || '';
+      majorInput.value = settings.major || '';
+      yearSelect.value = settings.academicYear || 'Sophomore (Year 2)';
+      bioInput.value = settings.bio || '';
+      dailySlider.value = settings.dailyTarget || 4;
+      dailyVal.textContent = (settings.dailyTarget || 4) + ' Hours';
+      pomodoroSelect.value = settings.pomodoroDuration || 45;
+      notifyReminders.checked = settings.notifications !== false;
+      // Visual-only toggles default to their last-set or hardcoded state
+      notifyExam.checked = true;
+      notifyWeekly.checked = false;
+      notifySounds.checked = true;
+      // Theme radios
+      var theme = settings.theme || 'light';
+      if (theme === 'light') {
+        themeLight.checked = true;
+      } else if (theme === 'dark') {
+        themeDark.checked = true;
+      } else {
+        themeSystem.checked = true;
+      }
+    }
+
+    function collectSettings() {
+      var theme = 'light';
+      if (themeDark.checked) theme = 'dark';
+      else if (themeSystem.checked) theme = 'system';
+      return {
+        name: nameInput.value.trim(),
+        email: emailInput.value.trim(),
+        major: majorInput.value.trim(),
+        academicYear: yearSelect.value,
+        bio: bioInput.value.trim(),
+        dailyTarget: parseFloat(dailySlider.value),
+        pomodoroDuration: parseInt(pomodoroSelect.value, 10),
+        notifications: notifyReminders.checked,
+        theme: theme
+      };
+    }
+
+    // ---- Toast ----
+    function showToast() {
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(function () {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3500);
+    }
+
+    // ---- Init: load from localStorage ----
+    (function init() {
+      var settings = getSettings();
+      populateFields(settings);
+    })();
+
+    // ---- Save ----
+    saveBtn.addEventListener('click', function () {
+      var updated = saveSettings(collectSettings());
+      populateFields(updated);
+      showToast();
+    });
+
+    // ---- Discard ----
+    discardBtn.addEventListener('click', function () {
+      var settings = getSettings();
+      populateFields(settings);
+      // Visual feedback flash
+      var inputs = document.querySelectorAll('input[type="text"], input[type="email"], textarea');
+      inputs.forEach(function (input) {
+        input.classList.add('ring-2', 'ring-secondary');
+        setTimeout(function () { input.classList.remove('ring-2', 'ring-secondary'); }, 500);
+      });
+    });
+
+    // ---- Daily target slider live update ----
+    dailySlider.addEventListener('input', function () {
+      dailyVal.textContent = dailySlider.value + ' Hours';
+    });
+
+    // ---- Theme radios: save on change and apply ----
+    [themeLight, themeDark, themeSystem].forEach(function (radio) {
+      radio.addEventListener('change', function () {
+        saveSettings({ theme: collectSettings().theme });
+        applyTheme();
+      });
+    });
+
+    // ---- Export data ----
+    exportBtn.addEventListener('click', function () {
+      var data = loadData();
+      var json = JSON.stringify(data, null, 2);
+      var blob = new Blob([json], { type: 'application/json' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'study-planner-data-' + new Date().toISOString().slice(0, 10) + '.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    // ---- Deactivate account ----
+    deactivateBtn.addEventListener('click', function () {
+      var confirmed = confirm('Are you sure you want to deactivate your account?\n\nThis will permanently delete all your study data, subjects, sessions, goals, and settings. This action cannot be undone.');
+      if (confirmed) {
+        localStorage.removeItem(STORAGE_KEY);
+        window.location.reload();
+      }
+    });
+
+    // ---- Change password (visual only) ----
+    changePasswordBtn.addEventListener('click', function () {
+      showToast();
+    });
+  </script>
+</div></main></div></body></html>
